@@ -24,10 +24,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
 </head>
 <body>
+<div id="start-block"><div class="spinner"></div></div>
 <video autoplay muted loop class="backVideo">
   <source src="video/plexus.mp4" type="video/mp4" />
 </video>
-
 
 <div class="login-block">
   <div ng-app="login" ng-controller="AppCtrl" ng-cloak>
@@ -78,9 +78,11 @@
 
     <script>
         $(document).ready(function(){
-            $(".loginBtn").fadeIn('fast',function () {
-                $(".contactBtn").fadeIn('fast');
-            });
+                $("#start-block").fadeOut("slow", function(){
+                    $(".loginBtn").fadeIn('fast',function () {
+                        $(".contactBtn").fadeIn('fast');
+                    });
+                });
         });
     </script>
 
