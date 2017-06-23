@@ -1,0 +1,221 @@
+html {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+.is-resizable {
+    //background: #000000;
+    height: 100%;
+    overflow: hidden;
+}
+
+video.backVideo{
+  position: absolute;
+  opacity: 0.2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+body{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+43,09244e+61,000000+88 */
+background: rgb(0,0,0); /* Old browsers */
+background: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 43%, rgba(9,36,78,1) 61%, rgba(0,0,0,1) 88%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(0,0,0,1) 43%,rgba(9,36,78,1) 61%,rgba(0,0,0,1) 88%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(0,0,0,1) 43%,rgba(9,36,78,1) 61%,rgba(0,0,0,1) 88%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+}
+
+ul#main_menu{
+  list-style: none;
+  margin-top: 100px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  li{
+    cursor: pointer;
+    border-bottom: 4px solid transparent;
+    opacity: 1;
+    transition: all 250ms ease-out;
+    &.active{
+      border-bottom: 4px solid white;
+      .main_menu_item_text{
+        color: white;
+      }
+    }
+    &:hover{
+      border-bottom: 4px solid white;
+      .main_menu_item_text{
+        color: white;
+      }
+    }
+    &.hoverfade{
+      opacity: 0.6;
+    }
+    .main_menu_item_text{
+      transition: color 250ms ease-out;
+      font-weight: 200;
+      font-size: 18px;
+      text-transform: capitalize;
+      cursor: pointer;
+    }
+  }
+}
+
+.lower_background {
+    width: 100%;
+    height: 50%;
+    margin-top: 360px;
+    opacity: 0.95;
+}
+.main_content {
+    height: 100%;
+    width: 100%;
+}
+
+/*
+#main_menu {
+    position: absolute;
+    width: 1152px;
+    height: 194px;
+    top: 345px;
+    left: 50%;
+    margin-left: -576px;
+}
+#active_category {
+    width: 192px;
+    height: 8px;
+    margin-top: 195px;
+    margin-left: 0px;
+    background-color: white;
+}
+*/
+/*
+.main_menu_item {
+    float: left;
+    width: 192px;
+    height: 196px;
+    -webkit-animation: fadein 3s;
+    -moz-animation: fadein 3s;
+    -ms-animation: fadein 3s;
+    -o-animation: fadein 3s;
+    animation: fadein 3s;
+}
+*/
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.main_menu_item_5 {
+    float: left;
+    width: 230.4px;
+    height: 196px;
+}
+.main_menu_item_picture {
+    transform: scale(1);
+    width: 70px;
+    height: 70px;
+    margin: 0 auto;
+    background-size: cover !important;
+    transition: all 400ms ease-out;
+    opacity: 0;
+    &.ready{
+      opacity: 1;
+      width: 100px;
+      height: 100px;
+    }
+    &.activescale{
+      transform: scale(1.1);
+    }
+    &.restscale{
+      transform: scale(0.9);
+    }
+}
+.main_menu_item_picture.tv {
+    background: url('images/720p/tv_icon.png') no-repeat top left;
+}
+.main_menu_item_picture.video {
+    background: url('images/720p/video_icon.png') no-repeat top left;
+}
+.main_menu_item_picture.radio {
+    background: url('images/720p/radio_icon.png') no-repeat top left;
+}
+.main_menu_item_picture.reminders {
+    background: url('images/720p/reminders_icon.png') no-repeat top left;
+}
+.main_menu_item_picture.options {
+    background: url('images/720p/options_icon.png') no-repeat top left;
+}
+.main_menu_item_picture.contact {
+    background: url('images/720p/contact_icon.png') no-repeat top left;
+}
+
+.main_menu_item_text.inactive {
+    width: 100%;
+    height: 42px;
+    //color: #4594fc;
+    color: rgba(255,255,255,0.7);
+    text-align: center;
+}
+.main_menu_item_text.active {
+    width: 100%;
+    height: 42px;
+    color: white;
+    text-align: center;
+}
+
+.divider_div {
+    position: absolute;
+    top: 307px;
+    width: 3700px;
+    overflow: hidden;
+    height: 36px;
+    pointer-events: none;
+}
+/*
+.divider_div_shadow {
+    position: absolute;
+    top: 307px;
+    width: 100%;
+    height: 72px;
+    background: url('images/720p/divider_tv.png') no-repeat center;
+    pointer-events: none;
+}
+*/
+.divider_div_white {
+    position: absolute;
+    height: 2px;
+    top: 25px;
+    background: white;
+    width: 3700px;
+    left: 0;
+}
+
+
+
+.buttondemoBasicUsage section {
+  background: #f7f7f7;
+  border-radius: 3px;
+  text-align: center;
+  margin: 1em;
+  position: relative !important;
+  padding-bottom: 10px; }
+
+.buttondemoBasicUsage md-content {
+  margin-right: 7px; }
+
+.buttondemoBasicUsage section .md-button {
+  margin-top: 16px;
+  margin-bottom: 16px; }
+
+.buttondemoBasicUsage .label {
+  position: absolute;
+  bottom: 5px;
+  left: 7px;
+  font-size: 14px;
+  opacity: 0.54; }

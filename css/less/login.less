@@ -1,0 +1,61 @@
+html, body{
+  overflow: hidden;
+}
+
+.login-block{
+  margin-left: auto;
+  align-self: flex-start;
+  height:100%;
+  width:330px;
+  padding-top: 30px;
+  background-color: rgba(0,0,0,0.5);
+  position: relative;
+  h1{
+    margin:0px;
+    margin-bottom: 30px;
+    color: white;;
+    font-size: 27px;
+    span{
+      font-weight:200;
+    }
+  }
+  form{
+    color: white;
+    md-checkbox:not([disabled]).md-primary:not(.md-checked) .md-icon{
+      border-color: rgba(255,255,255,0.8);
+    }
+    .loginBtn, .contactBtn{
+      display: none;
+      &.show{
+        visibility: visible;
+      }
+    }
+    button{
+      width:100%;
+    }
+    md-content{
+      label{
+        color: white;
+      }
+      md-input-container{
+        margin: 10px 0;
+        margin-bottom: 0px;
+        .md-input{
+          border-color: rgba(255,255,255,0.2);
+        }
+        input{
+          color: white;
+        }
+      }
+    }
+  }
+  & > div{
+    height:100%;
+    & > div{
+      height:100%;
+      md-content{
+        background-color: transparent;
+      }
+    }
+  }
+}

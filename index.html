@@ -1,0 +1,142 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Cache-Control" content="max-age=0">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="No-Cache">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../alen/css/fonts.css" type="text/css">
+    <!--<link rel="stylesheet" href="../alen/css/zap_720.css">-->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<style>
+    body {
+        /*background-image: url("css/images/720p/start_menu_bg.png") !important;*/
+        background-repeat: repeat-x !important;
+    }
+</style>
+
+<body>
+<video autoplay muted loop class="backVideo">
+  <source src="video/plexus.mp4" type="video/mp4" />
+</video>
+<script>
+/*
+    function changeToActive0() {
+        var div = document.getElementById('active_category');
+        div.setAttribute("style", "margin-left: 0px;");
+    }
+
+    function changeToActive190() {
+        var div = document.getElementById('active_category');
+        div.setAttribute("style", "margin-left: 192px;");
+    }
+
+    function changeToActive380() {
+        var div = document.getElementById('active_category');
+        div.setAttribute("style", "margin-left: 384px;");
+    }
+
+    function changeToActive570() {
+        var div = document.getElementById('active_category');
+        div.setAttribute("style", "margin-left: 578px;");
+    }
+
+    function changeToActive760() {
+        var div = document.getElementById('active_category');
+        div.setAttribute("style", "margin-left: 776px;");
+    }
+
+    function changeToActive950() {
+        var div = document.getElementById('active_category');
+        div.setAttribute("style", "margin-left: 966px;");
+    }
+*/
+    function idiBreUpizduMaterinu() {
+        window.location.href = 'tv-menu.html';
+    }
+
+
+</script>
+<!--style="transform: scale(0.638889);-->
+<div id="all_divs">
+    <div id="inner_all_div" class="container">
+        <div id="fs"></div>
+        <div id="main_container">
+            <div id="main_content">
+                <ul id="main_menu" class="list-inline text-center">
+                    <li onclick="idiBreUpizduMaterinu()" id="tv_category"
+                         class="main_menu_item">
+                        <div id="main_menu_item_picture_tv" class="main_menu_item_picture tv"></div>
+                        <div id="main_menu_item_text_tv" class="main_menu_item_text inactive">TV</div>
+                    </li>
+                    <li id="video_category" class="main_menu_item">
+                        <div id="main_menu_item_picture_video" class="main_menu_item_picture video"></div>
+                        <div id="main_menu_item_text_video" class="main_menu_item_text inactive">video</div>
+                    </li>
+                    <li id="radio_category" class="main_menu_item">
+                        <div id="main_menu_item_picture_radio" class="main_menu_item_picture radio"></div>
+                        <div id="main_menu_item_text_radio" class="main_menu_item_text inactive">radio</div>
+                    </li>
+                    <li id="reminders_category" class="main_menu_item">
+                        <div id="main_menu_item_picture_reminders" class="main_menu_item_picture reminders"></div>
+                        <div id="main_menu_item_text_reminders" class="main_menu_item_text inactive">reminders</div>
+                    </li>
+                    <li id="options_category" class="main_menu_item">
+                        <div id="main_menu_item_picture_options" class="main_menu_item_picture options"></div>
+                        <div id="main_menu_item_text_options" class="main_menu_item_text inactive">options</div>
+                    </li>
+                    <li id="contact_category" class="main_menu_item">
+                        <div id="main_menu_item_picture_contact" class="main_menu_item_picture contact"></div>
+                        <div id="main_menu_item_text_contact" class="main_menu_item_text inactive">contact</div>
+                    </li>
+                    <!--<div id="active_category" style="transition: margin-left 0.4s; margin-left: 0px;"></div>-->
+                </ul>
+            </div>
+        </div>
+        <div id="unitedVDIT_wrap" class="unitedVDIT_wrap_css" style="display: block;"></div>
+    </div>
+</div>
+
+
+<script>
+  $(document).ready(function(){
+    $(".main_menu_item_picture").addClass("ready");
+    $(document).on("mouseover","ul#main_menu li", function(){
+      var listElement = $("ul#main_menu li");
+      listElement.removeClass("hoverfade");
+      listElement.removeClass("active");
+      $(this).find(".main_menu_item_picture").removeClass("activescale").removeClass("restscale");
+      listElement.not(this).addClass("hoverfade");
+      listElement.find(".main_menu_item_picture").not($(this).find(".main_menu_item_picture")).addClass("restscale");
+      $(this).find(".main_menu_item_picture").addClass("activescale");
+      $(this).addClass("active");
+    });
+    /*
+    $(document).on("mouseout","ul#main_menu li", function(){
+      var listElement = $("ul#main_menu li");
+      listElement.find(".main_menu_item_picture").removeClass("activescale").removeClass("restscale");
+      listElement.removeClass("hoverfade");
+    });
+    */
+
+    $(document).on("click", function(event){
+      var clickedElem = $(event.target);
+      if(!clickedElem.parents().hasClass("list-inline")){
+        var listElement = $("ul#main_menu li");
+        listElement.find(".main_menu_item_picture").removeClass("activescale").removeClass("restscale");
+        listElement.removeClass("hoverfade");
+        listElement.removeClass("active");
+      }
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Cache-Control" content="max-age=0">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="No-Cache">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../alen/css/fonts.css" type="text/css">
+    <!--<link rel="stylesheet" href="../alen/css/zap_720.css">-->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+
+    <!-- Angular Material Library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+</head>
+<body>
+<video autoplay muted loop class="backVideo">
+  <source src="video/plexus.mp4" type="video/mp4" />
+</video>
+
+
+<div class="login-block">
+  <div ng-app="login" ng-controller="AppCtrl" ng-cloak>
+      <div class="login-wrap">
+          <h1 class="text-center">Media <span>Player</span></h1>
+          <form>
+              <md-content layout="column" layout-padding>
+                  <md-input-container>
+                      <label>Username</label>
+                      <input type="text" ng-model="user.title">
+                  </md-input-container>
+              </md-content>
+
+              <md-content layout="column" layout-padding>
+                  <md-input-container>
+                      <label>Password</label>
+                      <input type="password" ng-model="user.password">
+                  </md-input-container>
+              </md-content>
+
+              <div layout="column" layout-padding>
+                  <md-checkbox aria-label="Remember me" ng-model="user.remember" class="md-primary">
+                      Remember me
+                  </md-checkbox>
+              </div>
+
+              <section layout="row" layout="column" layout-wrap>
+                  <md-button class="md-raised md-primary loginBtn">Login</md-button>
+              </section>
+              <section layout="row" layout="column" layout-wrap>
+                  <md-button class="md-raised contactBtn">Contact Us</md-button>
+              </section>
+          </form>
+      </div>
+  </div>
+</div>
+
+
+    <script>
+    angular.module('login', ['ngMaterial'])
+    .controller('AppCtrl', function($scope) {
+        $scope.title1 = 'Button';
+        $scope.title4 = 'Warn';
+        $scope.isDisabled = true;
+        $scope.googleUrl = 'http://google.com';
+      });
+    </script>
+
+    <script>
+        $(document).ready(function(){
+            $(".loginBtn").fadeIn('fast',function () {
+                $(".contactBtn").fadeIn('fast');
+            });
+        });
+    </script>
+
+</body>
+</html>
